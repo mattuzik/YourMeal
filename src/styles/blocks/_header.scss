@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.header {
+  background-color: var(--color-yellow);
+  padding-block: rem(24);
+  
+  &__contain {
+    display: flex;
+    justify-content: center;
+  }
+}

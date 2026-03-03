@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+.footer {
+  padding-block: fluid(50, 22);
+
+  &__content {
+    @include mobile-above {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__inner {
+    &.cols-2 {
+      @include mobile-above {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: fluid(160, 0);
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+      }
+    }
+    @include mobile {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__logo {
+    width: fluid(300, 200);
+  }
+
+  &__links {
+    &-title {
+      margin-bottom: fluid(22, 8);
+    }
+
+    &-link {
+      @include hover {
+        color: var(--color-orange);
+      }
+      &.tel {
+        display: inline-flex;
+        gap: rem(4);
+      }
+    }
+  }
+}

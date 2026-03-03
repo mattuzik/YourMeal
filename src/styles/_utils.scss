@@ -1,0 +1,38 @@
+@use 'helpers' as *;
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding-inline);
+  margin: 0 auto;
+}
+
+.container-min {
+  max-width: var(--container-width-min);
+  padding-inline: var(--container-padding-inline);
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.is-lock {
+  overflow: hidden;
+}

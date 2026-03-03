@@ -1,0 +1,20 @@
+@use 'helpers' as *;
+
+:root {
+  --color-yellow: #FFAB08;
+  --color-orange: #FF7020;
+  --color-orange-accent: #ff5c00;;
+  --color-black: #000000;
+  --color-light: #F2F2F3;
+  --color-gray-light: #b1b1b1;;
+
+  --container-width: 1260px;
+  --container-width-min: 800px;
+  --container-padding-inline: 15px;
+
+  --font-family: "Nunito", sans-serif;
+
+  --transition-duration: 0.2s;
+
+  --border: 1px solid;
+}

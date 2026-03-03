@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    font-size: rem(14);
+    gap: rem(6);
+
+    &-weight {
+      color: var(--color-gray-light);
+    }
+  }
+
+  &__controls {
+    user-select: none;
+    display: flex;
+    gap: rem(18);
+  }
+
+  &__control {
+    cursor: pointer;
+    user-select: none;
+    @include hover {
+      color: var(--color-orange);
+    }
+  }
+
+  &__image {
+    max-width: 80px;
+    object-fit: cover;
+    border-radius: rem(8);
+    user-select: none;
+  }
+}

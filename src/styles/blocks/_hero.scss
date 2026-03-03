@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+
+.hero {
+  background-color: var(--color-yellow);
+  padding-bottom: fluid(64, 32);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+  @include tablet-only {
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+
+  &__contain {
+    display: flex;
+    gap: rem(21);
+    justify-content: space-between;
+    align-items: center;
+
+    &.container-min {
+      @include mobile {
+        max-width: rem(300);
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    //max-width: rem(326);
+    @include mobile {
+      order: 2;
+    }
+  }
+
+  &__content {
+    color: var(--color-light);
+
+    &-title {
+      font-size: rem(50);
+      padding-bottom: rem(52);
+      .accent {
+        color: var(--color-orange-accent);
+      }
+
+      @include mobile {
+        font-size: rem(30);
+        padding-bottom: rem(16);
+      }
+    }
+  }
+}

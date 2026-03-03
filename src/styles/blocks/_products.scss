@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.products {
+  &__catalog {
+    display: grid;
+    min-height: rem(390);
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(18);
+    }
+  }
+
+  &__title {
+    margin-bottom: fluid(24, 20);
+  }
+
+  &__card {
+    &-image {
+      border-radius: rem(12);
+      margin-bottom: fluid(16, 10);
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+    &-name {
+      margin-bottom: fluid(30, 16);
+    }
+
+    &-weight {
+      margin-bottom: rem(8);
+      color: var(--color-gray-light);
+    }
+
+    &-button {
+      width: 100%;
+      padding-block: rem(11);
+      border-radius: rem(12);
+      border: 1px solid var(--color-light);
+
+      @include hover {
+        background-color: var(--color-light);
+        border: var(--border);
+        color: var(--color-orange);
+        opacity: 0.9;
+      }
+    }
+  }
+}

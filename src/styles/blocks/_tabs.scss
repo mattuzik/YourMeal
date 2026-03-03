@@ -1,0 +1,65 @@
+@use '../helpers' as *;
+
+.tabs {
+  margin-bottom: fluid(100, 80);
+  &__buttons {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    margin-block: rem(40);
+    gap: fluid(20, 8);  
+    
+    @include mobile {
+      margin-block: rem(30);
+    }
+  }
+
+  &__buttons > * {
+    scroll-snap-align: start;
+  }
+
+  &__button {
+    display: flex;
+    padding: rem(8) rem(14);
+    border-radius: 100rem;
+    gap: rem(8);
+    border: 1px solid var(--color-light);
+    white-space: nowrap;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      border: 1px solid var(--color-yellow);
+    }
+
+    &.is-active {
+      background-color: var(--color-yellow);
+      border: 1px solid var(--color-yellow);
+      pointer-events: none;
+    }
+
+    &-image {
+      min-width: 24px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 25% auto;
+    margin-bottom: fluid(70, 50);
+    gap: rem(75);
+
+    @include tablet {
+      grid-template-columns:  repeat(1, 1fr);
+      gap: rem(20);
+    }
+  }
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+      overflow: hidden;
+    }
+  }
+}

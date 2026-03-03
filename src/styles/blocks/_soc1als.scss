@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.soc1als {
+  display: flex;
+  gap: rem(16);
+  &__link {
+    color: var(--color-orange);
+
+    @include hover {
+      color: var(--color-yellow);
+    }
+  }
+}

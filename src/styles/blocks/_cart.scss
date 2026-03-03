@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.cart {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(12);
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;    
+  }
+
+  &__order-button {
+    width: 100%;
+    background-color: var(--color-orange);
+    color: var(--color-light);
+    padding-block: rem(12);
+    border-radius: rem(12);
+    border: var(--border);
+
+    @include hover {
+      background-color: var(--color-light);
+      color: var(--color-orange);
+    }
+  }
+
+  &__total {
+    margin-top: rem(16);
+    margin-bottom: rem(24);
+  }
+
+  &__delivery {
+    display: flex;
+    gap: rem(8);
+    margin-block: rem(8);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(22);
+  }
+}
