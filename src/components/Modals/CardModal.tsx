@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { CartContext } from '../../App'
+import { CartContext } from '../../context/CartContext'
 
 const CardModal = ({item, isCardModalOpen, setCardModalOpen} : any) => {
   const { addToCart } : any = useContext(CartContext)

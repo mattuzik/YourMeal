@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import {CategoryContext} from '../../App'
+import {CategoryContext} from '../../context/CategoryContext'
 
 type category = {
   title: string,
@@ -31,8 +31,7 @@ const Categories = () => {
   return (
   <header className="tabs__header container">
     <div className="tabs__buttons">
-      {
-        categories.map((item) => {
+      {categories.map((item) => {
             return (
               <button 
                 className={`tabs__button ${currentCategory === item.category ? 'is-active' : ''}`} 
@@ -44,41 +43,7 @@ const Categories = () => {
                 {item.title}
               </button>
             )
-        })
-      }
-
-      
-      {/*       
-      
-      <button className="tabs__button" type="button" id="tab-4" role="tab" aria-controls="tabpanel-4" data-js-tabs-button aria-selected="false">
-        <img src="/icons/combos.svg" className="tabs__button-image" />
-        Комбо
-      </button>          
-      
-      <button className="tabs__button" type="button" id="tab-5" role="tab" aria-controls="tabpanel-5" data-js-tabs-button aria-selected="false">
-        <img src="/icons/shawarma.svg" className="tabs__button-image" />
-        Шаурма
-      </button>
-                      
-      <button className="tabs__button" type="button" id="tab-6" role="tab" aria-controls="tabpanel-6" data-js-tabs-button aria-selected="false">
-        <img src="/icons/pizzza.svg" className="tabs__button-image" />
-        Пицца
-      </button>
-
-      <button className="tabs__button" type="button" id="tab-7" role="tab" aria-controls="tabpanel-7" data-js-tabs-button aria-selected="false">
-        <img src="/icons/wok.svg" className="tabs__button-image" />
-        Вок
-      </button>
-
-      <button className="tabs__button" type="button" id="tab-8" role="tab" aria-controls="tabpanel-8" data-js-tabs-button aria-selected="false">
-        <img src="/icons/dessert.svg" className="tabs__button-image" />
-        Десерты
-      </button>          
-      
-      <button className="tabs__button" type="button" id="tab-9" role="tab" aria-controls="tabpanel-9" data-js-tabs-button aria-selected="false">
-        <img src="/icons/sauce.svg" className="tabs__button-image" />
-        Соусы
-      </button> */}
+        })}
     </div>
   </header>
   )

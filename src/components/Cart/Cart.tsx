@@ -1,11 +1,12 @@
 import { useContext } from 'react'
-import {CartContext, CardContext} from '../../App'
+import { ModalsContext } from '../../App'
+import { CartContext } from '../../context/CartContext'
 
 import CartItem from '../CartItem/CartItem'
 
 const Cart = () => {
   const { cartItems, addCount, totalPrice, totalAmount } : any = useContext(CartContext)
-  const { openDeliveryModal } : any = useContext(CardContext)
+  const { openDeliveryModal } : any = useContext(ModalsContext)
 
   return ( 
     <div className="cart">

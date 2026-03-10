@@ -1,12 +1,12 @@
 import { useContext } from 'react'
-import { CardContext } from '../../App'
+import { ModalsContext } from '../../App'
 
 const CardItem = (props: any) => {
   const {
     item
   } = props
 
-  const { openCardModal } : any = useContext(CardContext)
+  const { openCardModal } : any = useContext(ModalsContext)
 
   return (
     <>

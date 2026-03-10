@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CategoryContext } from '../../App'
+import { CategoryContext } from '../../context/CategoryContext.tsx'
 
 import Categories from "../Categories/Categories";
 import CardItem from '../CardItem/Cardtem.tsx'
