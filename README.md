@@ -5,6 +5,7 @@
 * Using local storage
 * Sass
 * BEM
+* GitHub Pages
 
 ## GitHub Pages link is
 https://mattuzik.github.io/YourMeal/
